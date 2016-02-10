@@ -1,4 +1,4 @@
-# Xposed-Screenshot-Delay-Remover
+# Xposed-Screenshot-Delay-Remover-Mod
 
 Remove screenshot delay between key press and screenshot
 
@@ -9,7 +9,4 @@ Add compatible with ICS and MM.
 
 
 
-[Download](https://github.com/bin456789/Xposed-Screenshot-Delay-Remover/releases) 
-
-
-
+[Download](http://repo.xposed.info/module/bin.xposed.screenshotdelayremover.mod)

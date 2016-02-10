@@ -1,4 +1,4 @@
-package com.mohammadag.screenshotdelayremover;
+package bin.xposed.screenshotdelayremover.mod;
 
 import android.os.Build;
 import android.os.Handler;

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    signingConfigs {
+        config {
+            try {
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+                storeFile file(STORE_FILE)
+                storePassword STORE_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException(ex.message + " You should define KEY_ALIAS, KEY_PASSWORD, STORE_FILE and STORE_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId "bin.xposed.screenshotdelayremover.mod"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    provided files('libs/XposedBridgeApi-30.jar')
+}
