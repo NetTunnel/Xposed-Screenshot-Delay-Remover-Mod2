@@ -24,7 +24,7 @@ public class XposedMod implements IXposedHookLoadPackage {
                     lpparam.classLoader, "getScreenshotChordLongPressDelay", XC_MethodReplacement.returnConstant(DELAY));
 
         else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
-            XposedHelpers.findAndHookMethod("com.android.internal.policy.impl.PhoneWindowManagerr",
+            XposedHelpers.findAndHookMethod("com.android.internal.policy.impl.PhoneWindowManager",
                     lpparam.classLoader, "getScreenshotChordLongPressDelay", XC_MethodReplacement.returnConstant(DELAY));
 
         else {
